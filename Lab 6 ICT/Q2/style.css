@@ -1,0 +1,74 @@
+body {
+    font-family: Arial;
+    background-color: white;
+}
+
+.form-box {
+    width: 340px;
+    height: 325px;
+    background-color: #ffff99;
+    border: 1px solid blue;
+    padding: 8px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 23px;
+}
+
+label {
+    width: 105px;
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.row input,
+.row select {
+    width: 90px;
+    height: 16px;
+    font-size: 9px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    height: 78px;
+}
+
+.choices {
+    font-size: 8px;
+    line-height: 11px;
+}
+
+.choices input {
+    margin: 0 8px 0 0;
+    width: 12px;
+    height: 10px;
+}
+
+.comments {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.comments textarea {
+    width: 245px;
+    height: 28px;
+    resize: none;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 3px;
+}
+
+button {
+    width: 92px;
+    height: 17px;
+    font-size: 9px;
+    background-color: white;
+    border: 1px solid gray;
+}

@@ -1,0 +1,25 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: lightyellow;
+}
+
+table {
+    width: 60%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 12px;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+td {
+    background-color: lightblue;
+}
