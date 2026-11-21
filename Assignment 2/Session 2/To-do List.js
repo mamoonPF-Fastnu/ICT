@@ -3,13 +3,14 @@ const readline = require("readline");
 let tasks = [];
 
 const r1=readline.createInterface({
-    Input:ProcessingInstruction.stdin,output:process.srdout
+    input: process.stdin,
+    output: process.stdout
 });
 
 function addTask(){
     r1.question("Ente the Task:",function(task){
         if(task.trim() !== ""){
-            task.push(task);
+            tasks.push(task);
             console.log("Task added successfully!");
         }else{
             console.log("Task cannot be empty!");
@@ -52,7 +53,7 @@ function displayTasks() {
 
 function clearTask(){
     tasks = [];
-    console.log("All tasks hvae been cleared");
+    console.log("All tasks have been cleared");
 }
 
 function showMenu(){
@@ -79,11 +80,14 @@ function showMenu(){
                 break;
 
             case "4":
-                clearTasks();
+                clearTask();
                 showMenu();
                 break;
             case "5":
-                console.log("Invalid Choice,try again :");
+                r1.close();
+                break;
+            default:
+                console.log("Invalid choice, try again:");
                 showMenu();
         }
     });
