@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Result</title>
+</head>
+
+<body>
+
+    <h2>Your BMI Result</h2>
+
+    <p>Your BMI is: <b id="bmi"></b></p>
+
+    <p>Category: <b id="category"></b></p>
+
+    <p>Age: <b id="age"></b></p>
+
+    <p>Gender: <b id="gender"></b></p>
+
+    <button onclick="window.location.href='index.html'">
+        Go Back
+    </button>
+
+    <script>
+
+        
+        let data = new (window.location.search);
+
+        document.getElementById("bmi").innerHTML =
+            data.get("bmi");
+
+        document.getElementById("category").innerHTML =
+            data.get("category");
+
+        document.getElementById("age").innerHTML =
+            data.get("age");
+
+        document.getElementById("gender").innerHTML =
+            data.get("gender");
+
+    </script>
+
+</body>
+</html>
+

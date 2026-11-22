@@ -1,0 +1,83 @@
+
+
+<html>
+<head>
+    <title>BMI Calculator</title>
+</head>
+
+<body>
+
+    <h2>BMI Calculator</h2>
+
+    <form id="bmiForm">
+
+        <label>Enter Your Weight (KG)</label><br>
+        <input type="number" id="weight" placeholder="Weight in KG" required>
+        <br><br>
+
+        <label>Enter Your Height (Meters)</label><br>
+        <input type="number" id="height" placeholder="Height in meters" step="any" required>
+        <br><br>
+
+        <label>Enter Your Age</label><br>
+        <input type="number" id="age" placeholder="Age in years" required>
+        <br><br>
+
+        <label>Select Your Gender</label><br>
+
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+
+        <br><br>
+
+        <button type="submit">Calculate BMI</button>
+
+    </form>
+
+    <!-- Output -->
+    <p id="result"></p>
+
+    <script>
+
+        function calculateBMI() {
+
+            let weight = document.getElementById("weight").value;
+            let height = document.getElementById("height").value;
+            let age = document.getElementById("age").value;
+
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+
+            let bmi = weight / (height * height);
+
+            let category;
+
+            if (bmi < 18.5) {
+                category = "Underweight";
+            }
+            else if (bmi < 25) {
+                category = "Normal Weight";
+            }
+            else if (bmi < 30) {
+                category = "Overweight";
+            }
+            else {
+                category = "Obese";
+            }
+
+            document.getElementById("result").innerHTML =
+                "Your BMI is: " + bmi +
+                "<br>Category: " + category +
+                "<br>Age: " + age +
+                "<br>Gender: " + gender;
+        }
+
+        document.getElementById("bmiForm").onsubmit = function(event) {
+            event.preventDefault();
+            calculateBMI();
+        };
+
+    </script>
+
+</body>
+</html>
